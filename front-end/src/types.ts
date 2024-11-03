@@ -5,11 +5,11 @@ export type Cake = {
   imageUrl: string;
   yumFactor: number;
   _id: number;
-  }
+};
 
-  export type CakeInput = {
-    name: string;
-    comment: string;
-    imageUrl: string;
-    yumFactor: number;
-  }
+export type CakeInput = {
+  name: string;
+  comment: string;
+  imageUrl: string;
+  yumFactor: number;
+};

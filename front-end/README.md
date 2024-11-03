@@ -5,6 +5,7 @@
 If I had more time I would
 
 - Add unit tests to the front end
+- Add breakpoints for further responsiveness
 - Add a delete functionality to delete cakes from the list
 - Add authorization so only authorized users are allowed to add and view the cake list
 
