@@ -33,7 +33,7 @@ const AddCake = ({ cakeList }: { cakeList: Cake[] }) => {
         yumFactor: Number(data.yumFactor),
       };
 
-      cakeList.map((cake) => {
+      cakeList.forEach((cake) => {
         if (cake.name === data.name) {
           throw new Error("Cake names must be unique!");
         }
