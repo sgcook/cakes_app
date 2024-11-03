@@ -1,4 +1,4 @@
-import { Button, Card, VStack } from "@chakra-ui/react";
+import { Button, Card, PopoverBody, PopoverContent, PopoverRoot, PopoverTrigger, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Cake } from "./types";
@@ -20,10 +20,21 @@ useEffect(() => {
 return (
   <VStack alignItems={'center'}>
     {cakeList.length > 0 ? cakeList.map((cake: Cake) => 
-      <Card.Root>
-        <Card.Title>{cake.name}</Card.Title>
+      <Card.Root key={cake.name}>
+        <Card.Title>
+          {cake.name}
+        </Card.Title>
         <Card.Body>
-          {cake.imageUrl}
+          <PopoverRoot positioning={{ sameWidth: true }}>
+            <PopoverTrigger>
+            {cake.imageUrl}
+            </PopoverTrigger>
+            <PopoverContent width="auto">
+              <PopoverBody>
+                comment: {cake.comment}
+              </PopoverBody>
+            </PopoverContent>
+          </PopoverRoot>
         </Card.Body>
       </Card.Root>
       ) : 'No cakes available'}
