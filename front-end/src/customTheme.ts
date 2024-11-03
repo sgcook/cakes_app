@@ -2,6 +2,7 @@ import "@fontsource/playfair-display";
 
 import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react"
 
+// TODO - revist breakpoints, currently not working
 const config = defineConfig({
   theme: {
     breakpoints: {
@@ -13,7 +14,7 @@ const config = defineConfig({
         heading: { value: `'Playfair', sans-serif`},
         body: { value: `'Playfair', sans-serif`}
       },
-    }
+    },
   },
 });
 
